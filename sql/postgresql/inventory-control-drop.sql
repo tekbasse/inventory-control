@@ -1,121 +1,80 @@
 -- inventory-control-drop.sql
 --
--- @author Dekka Corp.
+-- @author Benjamin Brink
 -- @ported from sql-ledger and combined with parts from OpenACS ecommerce package
 -- @license GNU GENERAL PUBLIC LICENSE, Version 2, June 1991
--- @cvs-id
 --
 
-drop trigger qci_ec_custom_p_f_values_audit_tr on qci_ec_custom_product_field_values;
 
-drop function qci_ec_custom_p_f_values_audit_tr ();
+drop table qci_announcements;
 
-drop table qci_ec_custom_p_field_values_audit;
+drop index qci_ec_product_links_map_idx;
 
-drop table qci_ec_custom_product_field_values;
+drop table qci_ec_product_links_map;
 
-drop trigger qci_ec_custom_prod_fields_audit_tr on qci_ec_custom_product_fields;
-
-drop function qci_ec_custom_prod_fields_audit_tr ();
-
-drop table qci_ec_custom_product_fields_audit;
-
-drop table qci_ec_custom_product_fields;
-
-
-
-
-drop trigger qci_ec_product_links_audit_tr on qci_ec_product_links;
-
-drop function qci_ec_product_links_audit_tr ();
-
-drop table qci_ec_product_links_audit ();
-
-drop index qci_ec_product_links_idx on qci_ec_product_links ();
-
-drop table qci_ec_product_links ();
-
-
-
-drop trigger qci_ec_product_u_c_prices_audit_tr on qci_ec_product_user_class_prices;
-
-drop function qci_ec_product_u_c_prices_audit_tr ();
-
-drop table qci_ec_product_u_c_prices_audit ();
-
-drop index qci_ec_product_user_class_idx on qci_ec_product_user_class_prices();
-
-drop table qci_ec_product_user_class_prices ();
-
-
-drop trigger qci_ec_product_series_map_audit_tr on qci_ec_product_series_map;
-
-drop function qci_ec_product_series_map_audit_tr ();
-
-
-drop table qci_ec_product_series_map_audit ();
-
-drop index qci_ec_product_series_map_idx2 on qci_ec_product_series_map();
-
-drop table qci_ec_product_series_map ();
-
-
-drop trigger qci_ec_sale_prices_audit_tr on qci_ec_sale_prices;
-
-drop function qci_ec_sale_prices_audit_tr ();
-
-
-drop table qci_ec_sale_prices_audit;
-
-
-drop view qci_ec_sale_prices_current;
-
-drop index qci_ec_sale_prices_by_product_idx on qci_ec_sale_prices();
+drop index qci_ec_sale_prices_by_product_idx;
 
 drop table qci_ec_sale_prices;
 
-drop view qci_ec_sale_price_id_sequence;
-drop sequence qci_ec_sale_price_id_seq;
 
-drop index qci_ec_product_purchase_comb_idx4 on qci_ec_product_purchase_comb();
-drop index qci_ec_product_purchase_comb_idx3 on qci_ec_product_purchase_comb();
-drop index qci_ec_product_purchase_comb_idx2 on qci_ec_product_purchase_comb();
-drop index qci_ec_product_purchase_comb_idx1 on qci_ec_product_purchase_comb();
-drop index qci_ec_product_purchase_comb_idx0 on qci_ec_product_purchase_comb();
+drop index qci_ec_product_purchase_comb_idx4;
+drop index qci_ec_product_purchase_comb_idx3;
+drop index qci_ec_product_purchase_comb_idx2;
+drop index qci_ec_product_purchase_comb_idx1;
+drop index qci_ec_product_purchase_comb_idx0;
 
-drop table qci_ec_product_purchase_comb ();
+drop table qci_ec_product_purchase_comb;
 
-drop trigger qci_ec_products_audit_tr on qci_ec_products;
+drop index qci_partstax_parts_id_idx;
 
-drop function qci_ec_products_audit_tr ();
-
-drop table qci_ec_products_audit ();
-
-drop view qci_ec_products_searchable;
-
-drop view qci_ec_products_displayable;
-
-drop table qci_ec_products();
+DROP TABLE qci_partstax;
 
 
-
-drop function qci_timespan_days();
-
-drop function qci_least();
-
-DROP TRIGGER qci_check_inventory ON qar_oe;
+DROP TABLE qci_partscustomer;
 
 
+drop index qci_pricegroup_id_idx;
+drop index qci_pricegroup_pricegroup_idx;
 
-DROP FUNCTION qci_check_inventory();
+
+DROP TABLE qci_pricegroup;
+
+drop index qci_partsgroup_idx;
+drop index qci_partsgroup_id_idx;
+
+DROP TABLE qci_partsgroup;
+
+
 
 
 DROP TABLE qci_inventory;
 
-
 DROP TABLE qci_warehouse;
 
+drop index qci_series_model_idx;
+drop index qci_series_make_idx;
+drop index qci_series_series_id_idx;
 
-DROP TABLE qci_makemodel;
+DROP TABLE qci_series;
+
+drop table qci_product_series_map;
+
+
+drop table qci_part_attributes_map;
+
+drop table qci_attribute_choices;
+
+drop table qci_attributes;
+
+drop table qci_shipping_details;
+
+drop index qci_parts_product_name_idx;
+drop index qci_parts_sku_idx;
+drop index qci_parts_id_idx;
+
+drop table qci_parts;
+
+drop sequence qci_id_seq;
+
 
 
