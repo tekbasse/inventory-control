@@ -7,15 +7,14 @@
     <initial-install-p>f</initial-install-p>
     <singleton-p>f</singleton-p>
     
-    <version name="0.1d" url="http://openacs.org/repository/download/apm/inventory-control-0.1d.apm">
-        <owner url="mailto:torben@dekka.com">Torben Brosten</owner>
+    <version name="0.001" url="http://openacs.org/repository/download/apm/inventory-control-0.001.apm">
+        <owner url="mailto:tekbasse@yahoo.com">Benjamin Brink</owner>
         <owner url="http://openacs.org">OpenACS community</owner>
         <summary>Inventory package tracks inventory, parts locations and costs.</summary>
-        <vendor url="http://dekka.com">Dekka Corp of Oregon</vendor>
         <description format="text/plain">Inventory package provides inventory control, includes tracking locations and costs, can report changes to general ledger etc.</description>
         <maturity>0</maturity>
 
-        <provides url="inventory-control" version="0.1d"/>
+        <provides url="inventory-control" version="0.001"/>
 
         <callbacks>
         </callbacks>
