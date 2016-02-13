@@ -15,7 +15,7 @@
         <maturity>0</maturity>
 
         <provides url="inventory-control" version="0.001"/>
-
+        <requires url="accounts-ledger" version="0.001"/>
         <callbacks>
         </callbacks>
         <parameters>
